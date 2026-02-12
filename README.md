@@ -1,5 +1,25 @@
-# terraform-aws-multi-env-infra
+# Terraform AWS Multi-Environment Infrastructure
 
-This project is a modular Terraform-based AWS infrastructure setup that provisions isolated dev, staging, and production environments from a shared infrastructure module.
-Each environment includes its own S3 bucket, DynamoDB table, EC2 instances, security groups, and a custom public subnet, enabling consistent, repeatable, and scalable infrastructure provisioning using Infrastructure as Code (IaC).
+This project provisions AWS infrastructure using Terraform with support for
+multiple isolated environments: **dev**, **staging**, and **production**.
 
+## Features
+- Modular Terraform design
+- Environment-based infrastructure (dev / stg / prod)
+- EC2 instances
+- S3 buckets
+- DynamoDB tables
+- Security Groups
+- Custom public subnet
+- Default VPC usage
+
+## Project Structure
+- `infra-app/` – Reusable infrastructure module
+- `main.tf` – Environment orchestration
+- `variables.tf` – Input variables
+
+## Usage
+```bash
+terraform init
+terraform plan
+terraform apply
